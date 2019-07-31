@@ -1,7 +1,8 @@
 import * as actionTypes from './actionTypes'
 const initialState = {
     homePage: {
-        isBreadSelect: false
+        isBreadSelect: false,
+        isSelectingEnded: false
     }
 }
 const reducer = (state = initialState, action) => {
@@ -15,8 +16,15 @@ const reducer = (state = initialState, action) => {
                     isBreadSelect: !state.homePage.isBreadSelect
                 }
             }
+        case actionTypes.END_SELECTING:
+            return {
+                ...state,
+                homePage: {
+                    ...state.homePage,
+                    isSelectingEnded: true
+                }
+            }
         default: return state
-
 
     }
 }

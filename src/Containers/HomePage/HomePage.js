@@ -15,8 +15,11 @@ class HomePage extends Component {
     render() {
         return (
             <main className={`${globStyles.Section}`}>
-                <AddRemoverWrap breadStatus={this.props.isBreadSelect}
-                    clicked={this.props.toggleBreadSelect} />
+                <AddRemoverWrap
+                    breadStatus={this.props.isBreadSelect}
+                    selectStatus={this.props.isSelectingEnded}
+                    clicked={this.props.toggleBreadSelect}
+                    endSelectingClicked={this.props.endSelecting} />
                 <Number />
                 <TostsWrap />
             </main>
@@ -24,11 +27,15 @@ class HomePage extends Component {
     }
 }
 const mapStateToProps = state => {
-    return { isBreadSelect: state.homePage.isBreadSelect }
+    return {
+        isBreadSelect: state.homePage.isBreadSelect,
+        isSelectingEnded: state.homePage.isSelectingEnded
+    }
 }
 const mapDispatchToProps = dispatch => {
     return {
-        toggleBreadSelect: () => dispatch({ type: actionTypes.TOGGLE_SELECT_HOME_BREAD })
+        toggleBreadSelect: () => dispatch({ type: actionTypes.TOGGLE_SELECT_HOME_BREAD }),
+        endSelecting: () => dispatch({ type: actionTypes.END_SELECTING })
     }
 }
 
