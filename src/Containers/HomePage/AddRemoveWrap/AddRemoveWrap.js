@@ -2,11 +2,11 @@ import React from 'react';
 import locStyles from './AddRemoveWrap.module.scss'
 import AddRemover from '../../../Components/AddRemover/AddRemover'
 
-const AddRemoveWrap = () => {
+const AddRemoveWrap = props => {
     return (
         <div className={locStyles.AddRemoveWrap}>
-            <AddRemover title={'dodaj tosta'} />
-            <AddRemover title={'upiecz go'} oneSign={true} />
+            <AddRemover title={'dodaj tosta'} {...props} />
+            <AddRemover title={'upiecz go'} oneSign={true}  {...props} />
         </div>
     );
 }

@@ -9,7 +9,10 @@ const AddRemover = props => {
         <div className={locStyles.AddRemover}>
             <h2 className={locStyles.AddRemoverText}>{props.title}</h2>
             <div className={locStyles.AddRemoverSignsWrap}>
-                {props.oneSign ? <Sign type='One' /> : <><Sign type='Plus' /><Sign type='Minus' /></>}
+                {props.oneSign ? <Sign type='One' /> :
+                    <>
+                        <Sign type='Plus' {...props} /> <Sign type='Minus' {...props} />
+                    </>}
                 {/* <Sign /> */}
             </div>
 
