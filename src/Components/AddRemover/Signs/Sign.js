@@ -16,7 +16,7 @@ const Sign = props => {
         <button className={`${locStyles.Sign} ${locStyles['Sign' + type]}`}
             onClick={props.type === 'One' ? props.endSelectingClicked : props.clicked}
             disabled={disabled}>
-
+            {props.children}
         </button>
     );
 }

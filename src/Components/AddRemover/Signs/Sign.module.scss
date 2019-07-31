@@ -3,6 +3,11 @@
 .Sign {
     background-color: $color-orange;
     z-index: 2;
+    font-size: #{0.8*$sign-size};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-blue;
 
     &:disabled {
         background-color: $color-grey-light;
