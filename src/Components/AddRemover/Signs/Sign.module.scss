@@ -2,9 +2,10 @@
 
 .Sign {
     background-color: $color-orange;
+    z-index: 2;
 
     &:disabled {
-        background-color: $color-grey;
+        background-color: $color-grey-light;
     }
 
     @include makeSquare($sign-size);

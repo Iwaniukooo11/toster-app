@@ -20,6 +20,7 @@ button {
 
 .Section {
     margin-top: #{$nav-size + 20px};
+    margin-bottom: #{$footer-size + 20px};
     display: grid;
     justify-items: center;
     align-content: center;

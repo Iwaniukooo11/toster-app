@@ -1,0 +1,29 @@
+@import '../../../sass/variables';
+
+.Toster {
+    background-color: $color-grey-light;
+    @include makeSquare($toster-size);
+    border-radius: 30% 30% 5% 5%;
+    position: relative;
+    box-shadow: inset 3px 3px 0px 3px $color-grey-dark;
+
+    &::after {
+        @include makePseudo;
+        @include makeSquare(20px);
+        background-color: $color-orange;
+        border-radius: 50%;
+        bottom: 15%;
+        right: 15%;
+    }
+
+    // &::before {
+    //     @include makePseudo;
+    //     right: 5%;
+    //     bottom: 0;
+    //     background-color: #000;
+    //     width: 4px;
+    //     height: 60%;
+    //     border-radius: 20px;
+    //     ;
+    // }
+}

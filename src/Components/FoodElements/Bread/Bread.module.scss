@@ -1,0 +1,14 @@
+@import '../../../sass/variables';
+
+.Bread {
+    border-radius: 87% 13% 100% 0% / 15% 100% 0% 85%;
+    @include makeSquare($bread-size);
+    background-color: $color-bread-start;
+    animation: Anim 5s linear both;
+}
+
+@keyframes Anim {
+    to {
+        background-color: $color-bread-end;
+    }
+}
