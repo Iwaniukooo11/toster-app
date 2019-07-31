@@ -4,11 +4,33 @@
     border-radius: 87% 13% 100% 0% / 15% 100% 0% 85%;
     @include makeSquare($bread-size);
     background-color: $color-bread-start;
-    animation: Anim 5s linear both;
+    transition: $bread-select-transition;
+    margin-bottom: 5px;
+    opacity: 0;
+
+    &Active {
+        opacity: 1;
+    }
+
+    &onAnim {
+        animation: Anim 6s linear both;
+    }
 }
 
 @keyframes Anim {
-    to {
+
+    10% {
+        transform: translateY(70%);
+        background-color: $color-bread-start;
+    }
+
+    90% {
+        transform: translateY(70%);
+        background-color: $color-bread-end;
+    }
+
+    100% {
+        transform: none;
         background-color: $color-bread-end;
     }
 }

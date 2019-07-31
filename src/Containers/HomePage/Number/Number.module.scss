@@ -1,8 +1,16 @@
+@import '../../../sass/variables';
+
 .Number {
     font-size: 35vw;
     text-align: center;
     // width: 100%;
     // margin: 0 auto;
     display: block;
+    opacity: 0.1;
+    transition: $bread-select-transition;
     font-family: arial;
+
+    &Active {
+        opacity: 1;
+    }
 }
