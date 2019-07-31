@@ -1,0 +1,25 @@
+$color-blue:#34495e;
+$color-white:#fff;
+$color-grey:#888;
+$color-orange:#e67e22;
+
+$sign-size:55px;
+$nav-size:55px;
+
+@mixin makeSquare($a) {
+    width: $a;
+    height: $a;
+    line-height: $a;
+}
+
+@mixin makePseudo() {
+    content: "";
+    position: absolute;
+}
+
+@mixin putInCenter() {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

@@ -1,0 +1,22 @@
+@import '../../sass/variables';
+
+.AddRemover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &Text {
+        font-size: 28px;
+        text-transform: capitalize;
+        width: 70%;
+    }
+
+    &SignsWrap {
+        min-width: #{($sign-size * 2)+20px};
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -1,0 +1,27 @@
+@import './variables';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.Section {
+    margin-top: #{$nav-size + 20px};
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    row-gap: 20px;
+}

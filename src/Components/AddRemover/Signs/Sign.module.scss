@@ -1,0 +1,43 @@
+@import '../../../sass/variables';
+
+.Sign {
+    background-color: $color-orange;
+
+    &:disabled {
+        background-color: $color-grey;
+    }
+
+    @include makeSquare($sign-size);
+    position: relative;
+
+    &Plus {
+
+        &::after {
+            @include makePseudo;
+            @include putInCenter;
+            width: 75%;
+            height: 20%;
+            background-color: $color-blue;
+        }
+
+        &::before {
+            @include makePseudo;
+            @include putInCenter;
+            width: 20%;
+            height: 75%;
+            background-color: $color-blue;
+        }
+    }
+
+    &Minus {
+        &::after {
+            @include makePseudo;
+            @include putInCenter;
+            width: 75%;
+            height: 20%;
+            background-color: $color-blue;
+        }
+
+
+    }
+}
