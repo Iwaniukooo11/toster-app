@@ -1,18 +1,34 @@
 import React from 'react';
 import classes from './sass/App.module.scss'
-import HomePage from './Containers/HomePage/HomePage'
+
 import Nav from './Containers/Nav/Nav'
 import Footer from './Containers/Footer/Footer'
 
+import { Route, BrowserRouter } from 'react-router-dom'
+
+import HomePage from './Containers/HomePage/HomePage'
+import BuilderPage from './Containers/BuilderPage/BuilderPage'
+
+const routes = [
+  { path: '', name: 'Home', Component: HomePage },
+  { path: 'builder', name: 'Builder', Component: BuilderPage },
+]
+
 function App() {
   return (
+
     <div className={classes.App}>
-      {/* <h1>Test</h1> */}
       <Nav />
-      <HomePage />
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+
+        {routes.map(({ path, Component }) => (
+          <Route key={path} exact path={`/${path}`} component={Component} />
+        ))}
+      </BrowserRouter>
       <Footer />
-    </div>
-  );
+    </div >
+
+  )
 }
 
 export default App;

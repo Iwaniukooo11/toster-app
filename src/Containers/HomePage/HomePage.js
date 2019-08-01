@@ -27,8 +27,13 @@ class HomePage extends Component {
                 <TostsWrap
                     breadStatus={this.props.isBreadSelect}
                     selectStatus={this.props.isSelectingEnded} />
-                {this.props.isTostingDone ? <NextButton text={'dalej'} /> : null}
-
+                {this.props.isTostingDone ?
+                    <>
+                        <hr className={globStyles.line}/>
+                        <NextButton text={'dalej'} link={'/builder'}/>
+                    </>
+                     : null}
+      
             </main>
         );
     }

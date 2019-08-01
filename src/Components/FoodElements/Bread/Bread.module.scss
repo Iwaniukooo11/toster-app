@@ -16,6 +16,15 @@
     &onAnim {
         animation: Anim 6s linear both;
     }
+
+    &Done {
+        background-color: $color-bread-end;
+        box-shadow: inset 3px 3px 0px 3px $color-bread-end-strong;
+    }
+
+    &Big {
+        @include makeSquare($bread-size-big);
+    }
 }
 
 @keyframes Anim {
@@ -35,6 +44,6 @@
     100% {
         transform: none;
         background-color: $color-bread-end;
-        box-shadow: inset 3px 3px 1px 3px $color-bread-end-strong;
+        box-shadow: inset 3px 3px 0px 3px $color-bread-end-strong;
     }
 }

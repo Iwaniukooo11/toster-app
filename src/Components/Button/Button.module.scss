@@ -9,8 +9,19 @@
     background-color: $color-orange-light;
     box-shadow: inset -3px -4px 0px 1px $color-orange-dark;
     transition: .1s;
+    animation: Anim .2s linear;
 
     &:active {
         transform: scale(0.9);
+    }
+}
+
+@keyframes Anim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
