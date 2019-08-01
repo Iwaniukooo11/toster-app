@@ -31,7 +31,6 @@ class Number extends Component {
 
     render() {
         return (
-
             <span className={`${locStyles.Number} 
             ${this.props.selectStatus && !this.props.tostingStatus ? locStyles.NumberActive : null}`}>
                 {this.state.num}</span>

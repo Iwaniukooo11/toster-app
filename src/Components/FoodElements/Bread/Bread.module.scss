@@ -4,6 +4,7 @@
     border-radius: 87% 13% 100% 0% / 15% 100% 0% 85%;
     @include makeSquare($bread-size);
     background-color: $color-bread-start;
+    box-shadow: inset 3px 3px 0px 3px $color-orange;
     transition: $bread-select-transition;
     margin-bottom: 5px;
     opacity: 0;
@@ -22,15 +23,18 @@
     10% {
         transform: translateY(70%);
         background-color: $color-bread-start;
+        box-shadow: inset 3px 3px 0px 3px $color-orange;
     }
 
     90% {
         transform: translateY(70%);
         background-color: $color-bread-end;
+        box-shadow: inset 3px 3px 0px 3px $color-bread-end-strong;
     }
 
     100% {
         transform: none;
         background-color: $color-bread-end;
+        box-shadow: inset 3px 3px 1px 3px $color-bread-end-strong;
     }
 }
