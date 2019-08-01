@@ -27,7 +27,8 @@ class HomePage extends Component {
                 <TostsWrap
                     breadStatus={this.props.isBreadSelect}
                     selectStatus={this.props.isSelectingEnded} />
-                <NextButton text={'dalej'} />
+                {this.props.isTostingDone ? <NextButton text={'dalej'} /> : null}
+
             </main>
         );
     }
