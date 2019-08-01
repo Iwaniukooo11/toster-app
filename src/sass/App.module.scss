@@ -11,18 +11,41 @@
 body {
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
+    height: 100%;
 }
 
 button {
     border: none;
     outline: none;
+    font: inherit;
+}
+
+.line {
+    color: $color-blue;
+    width: 90%;
+    margin: 0 auto;
+    border: 0;
+    border-bottom: 3px solid $color-blue;
 }
 
 .Section {
-    margin-top: #{$nav-size + 20px};
-    margin-bottom: #{$footer-size + 20px};
+    // margin-top: #{$nav-size + 20px};
+    padding-top: #{$nav-size + 20px};
+    // margin-bottom: #{$footer-size + 20px};
+    padding-bottom: #{$footer-size + 20px};
+
     display: grid;
     justify-items: center;
     align-content: center;
     row-gap: 20px;
+    position: relative;
+}
+
+.App {
+    position: relative;
+    // min-height: calc(100vh - #{$nav-size + $footer-size});
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

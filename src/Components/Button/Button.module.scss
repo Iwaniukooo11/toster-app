@@ -1,0 +1,16 @@
+@import '../../sass/variables';
+
+.Button {
+    font-size: 30px;
+    text-transform: capitalize;
+    color: $color-blue;
+    border-radius: 20px;
+    padding: 6px 23px;
+    background-color: $color-orange-light;
+    box-shadow: inset -3px -4px 0px 1px $color-orange-dark;
+    transition: .1s;
+
+    &:active {
+        transform: scale(0.9);
+    }
+}

@@ -3,9 +3,15 @@
 .Footer {
     font-size: #{0.7* $footer-size};
     display: flex;
+    position: fixed;
+    position: absolute;
+    // bottom: 0;
+    bottom: 0;
+    width: 100%;
+    left: 0;
     align-items: center;
     justify-content: center;
     background-color: $color-blue;
-    color: $color-orange;
+    color: $color-orange-light;
     padding: 4px 0;
 }

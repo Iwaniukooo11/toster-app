@@ -4,6 +4,7 @@ import globStyles from '../../sass/App.module.scss'
 
 import AddRemoverWrap from './AddRemoveWrap/AddRemoveWrap'
 import Number from './Number/Number'
+import NextButton from '../../Components/Button/Button'
 
 import TostsWrap from './TostsWrap/TostsWrap'
 import { connect } from 'react-redux'
@@ -26,6 +27,7 @@ class HomePage extends Component {
                 <TostsWrap
                     breadStatus={this.props.isBreadSelect}
                     selectStatus={this.props.isSelectingEnded} />
+                <NextButton text={'dalej'} />
             </main>
         );
     }
