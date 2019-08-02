@@ -1,0 +1,14 @@
+@import '../../../sass/variables';
+
+.Oil {
+    border-radius: 30% 70% 81% 19% / 59% 49% 51% 41%;
+    background-color: red;
+    background-color: $color-orange-medium;
+    opacity: 0.5;
+    @include makeSquare(75%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 1;
+}

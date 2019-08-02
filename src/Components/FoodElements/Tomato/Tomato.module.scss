@@ -1,0 +1,48 @@
+@import '../../../sass/variables';
+
+.Tomato {
+    width: 60%;
+    height: 30%;
+    background-color: $color-red-light;
+    box-shadow: inset 0px -1px 0px 5px $color-red-dark;
+    border-radius: 50% 50% 49% 51% / 0% 0% 100% 100%;
+    position: absolute;
+    // top: 0;
+    // left: 0;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding: 5%;
+
+    &1 {
+        top: 50%;
+        left: 0;
+        transform: rotate(35deg)
+    }
+
+    &2 {
+        top: 17%;
+        right: 5%;
+        transform: rotate(245deg);
+    }
+
+    &Dot {
+        width: 8%;
+        height: 20%;
+        background-color: $color-white;
+        border-radius: 47% 53% 50% 50% / 22% 22% 78% 78%;
+        margin: 0 9% 5%;
+        padding: 5%;
+
+        &:nth-of-type(4) {
+            margin-left: 22%;
+        }
+
+        &:nth-of-type(5) {
+            margin-right: 22%;
+        }
+    }
+}

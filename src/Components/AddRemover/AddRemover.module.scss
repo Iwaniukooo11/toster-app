@@ -10,6 +10,14 @@
         font-size: 28px;
         text-transform: capitalize;
         width: 70%;
+
+        &Little {
+            font-size: 0.75em;
+            text-transform: lowercase;
+            // color: $color-grey;
+            opacity: 0.5;
+            display: inline-block;
+        }
     }
 
     &SignsWrap {

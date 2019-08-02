@@ -1,7 +1,7 @@
 @import '../../../sass/variables';
 
 .Bread {
-    border-radius: 87% 13% 100% 0% / 15% 100% 0% 85%;
+    border-radius: 87% 13% 100% 0% / 15% 100% 4% 85%;
     @include makeSquare($bread-size);
     background-color: $color-bread-start;
     box-shadow: inset 3px 3px 0px 3px $color-orange-dark;

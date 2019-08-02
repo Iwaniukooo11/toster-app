@@ -1,5 +1,10 @@
+@import '../../../sass/variables';
+
 .Bread {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: $bread-size-big;
+    margin: 0 auto;
 }

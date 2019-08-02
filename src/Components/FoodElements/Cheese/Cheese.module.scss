@@ -1,0 +1,26 @@
+@import '../../../sass/variables';
+
+.Cheese {
+    position: absolute;
+    background-color: $color-yellow-light;
+    z-index: 2;
+    border-radius: 39% 16% 18% 20%;
+    width: 47%;
+    height: 84%;
+    font-size: 9px;
+    box-shadow: inset 0.35em -0.20em 0 3px $color-yellow-dark;
+
+
+    &1 {
+        left: 6%;
+        top: 10%;
+        transform: rotate(5deg) scaleY(-1)
+    }
+
+    &2 {
+        height: 88%;
+        right: 6%;
+        top: 3%;
+        transform: rotate(-2deg)
+    }
+}

@@ -4,9 +4,18 @@ const initialState = {
         isBreadSelect: false,
         isSelectingEnded: false,
         isTostingDone: false
+    },
+    builderPage: {
+        oil: 0,
+        cheese: 0,
+        tomato: 0,
+        olives: 0
     }
 }
 const reducer = (state = initialState, action) => {
+    // console.log('reducer')
+    // console.log(state)
+    // console.log(action)
     switch (action.type) {
         case actionTypes.TOGGLE_SELECT_HOME_BREAD:
             return {
@@ -32,6 +41,23 @@ const reducer = (state = initialState, action) => {
                     isTostingDone: true
                 }
             }
+        case actionTypes.ADD_INGR:
+            return {
+                ...state,
+                builderPage: {
+                    ...state.builderPage,
+                    [action.ingr]: state.builderPage[action.ingr] + 1
+                }
+            }
+        case actionTypes.REMOVE_INGR:
+            return {
+                ...state,
+                builderPage: {
+                    ...state.builderPage,
+                    [action.ingr]: state.builderPage[action.ingr] - 1
+                }
+            }
+
         default: return state
     }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import locStyles from './HomePage.module.scss'
+// import locStyles from './HomePage.module.scss'
 import globStyles from '../../sass/App.module.scss'
 
 import AddRemoverWrap from './AddRemoveWrap/AddRemoveWrap'
@@ -29,11 +29,11 @@ class HomePage extends Component {
                     selectStatus={this.props.isSelectingEnded} />
                 {this.props.isTostingDone ?
                     <>
-                        <hr className={globStyles.line}/>
-                        <NextButton text={'dalej'} link={'/builder'}/>
+                        <hr className={globStyles.line} />
+                        <NextButton text={'dalej'} link={'/builder'} />
                     </>
-                     : null}
-      
+                    : null}
+
             </main>
         );
     }
