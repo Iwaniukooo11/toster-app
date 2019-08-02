@@ -27,6 +27,7 @@ const mapStateToProps = state => {
             tomato: state.builderPage.tomato,
             cheese: state.builderPage.cheese,
             olives: state.builderPage.olives,
+            cucumber: state.builderPage.cucumber,
         }
     }
 }

@@ -9,7 +9,8 @@ const initialState = {
         oil: 0,
         cheese: 0,
         tomato: 0,
-        olives: 0
+        olives: 0,
+        cucumber: 0
     }
 }
 const reducer = (state = initialState, action) => {

@@ -22,7 +22,7 @@
     }
 
     &:active {
-        background-color: $color-orange-medium;
+        transform: scale(0.9);
     }
 
     @include makeSquare($sign-size);

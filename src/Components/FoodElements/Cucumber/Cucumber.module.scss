@@ -1,0 +1,32 @@
+@import '../../../sass/variables';
+
+.Cucumber {
+    @include makeSquare(28%);
+    background-color: $color-cucumber-inside;
+    border: 3px solid $color-cucumber-outside;
+    position: absolute;
+    z-index: 5;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &1 {
+        top: 60%;
+        left: 10%;
+    }
+
+    &2 {
+        top: 10%;
+        left: 60%;
+    }
+
+    &::after {
+        @include makePseudo;
+        transform: translate(-50%, -50%);
+
+        left: 50%;
+        top: 50%;
+        clip-path: polygon(47% 49%, 80% 0, 89% 20%, 55% 57%, 60% 100%, 40% 100%, 45% 56%, 11% 20%, 20% 0);
+        @include makeSquare(80%);
+        background-color: #fff;
+    }
+}
