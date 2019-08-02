@@ -2,6 +2,7 @@ $color-blue:#34495e;
 $color-white:#fff;
 $color-grey-light:#ccc;
 $color-grey-dark:#aaa;
+
 $color-yellow-light:#ffe02e;
 $color-yellow-dark:#f3c600;
 $color-orange-light:#ffa502;
@@ -14,7 +15,6 @@ $color-green:#27ae60;
 $color-cucumber-outside:#009432;
 $color-cucumber-inside:#A3CB38;
 
-// $color-bread-start:#f39c12;
 $color-bread-start:$color-orange-light;
 $color-bread-end-strong:rgb(97, 75, 68);
 $color-bread-end:#8D6E63;
@@ -23,7 +23,7 @@ $sign-size:55px;
 $nav-size:55px;
 $footer-size:35px;
 $bread-size:16vw;
-$bread-size-big:32vw;
+$bread-size-big:40vw;
 $toster-size:#{2 * $bread-size};
 
 $bread-select-transition:.1s;

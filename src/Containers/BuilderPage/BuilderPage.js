@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import globStyles from '../../sass/App.module.scss'
 
 import AddRemoverWrap from './AddRemoveWrap/AddRemoveWrap'
+import Button from '../../Components/Button/Button'
 
 import * as actionTypes from '../../store/actionTypes'
 import { connect } from 'react-redux'
@@ -16,6 +17,7 @@ class BuilderPage extends Component {
                     ingr={this.props.ingr}
                     buildingStatus={true}
                 />
+                <Button text={'Dalej'} link='/login' />
             </main>
         );
     }
