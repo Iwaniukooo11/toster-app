@@ -1,11 +1,12 @@
 import React from 'react';
+import globStyles from '../../sass/App.module.scss'
 import locStyles from './AddRemover.module.scss'
 import Sign from './Signs/Sign'
 
 const AddRemover = props => {
     return (
         <div className={locStyles.AddRemover}>
-            <h2 className={locStyles.AddRemoverText}>
+            <h2 className={`${locStyles.AddRemoverText} ${globStyles.SectionHead}`}>
                 {props.title}
                 <br />
                 <span className={locStyles.AddRemoverTextLittle}>{`(max ${props.max})`}</span>

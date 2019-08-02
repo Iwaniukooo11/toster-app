@@ -11,7 +11,8 @@ const initialState = {
         tomato: 0,
         olives: 0,
         cucumber: 0
-    }
+    },
+    name: ''
 }
 const reducer = (state = initialState, action) => {
     // console.log('reducer')
@@ -58,7 +59,11 @@ const reducer = (state = initialState, action) => {
                     [action.ingr]: state.builderPage[action.ingr] - 1
                 }
             }
-
+        case actionTypes.ADD_NAME:
+            return {
+                ...state,
+                name: action.name
+            }
         default: return state
     }
 }

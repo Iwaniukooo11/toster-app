@@ -4,3 +4,5 @@ export const DONE_TOSTING = 'DONE_TOSTING'
 
 export const ADD_INGR = 'ADD_INGR'
 export const REMOVE_INGR = 'REMOVE_INGR'
+
+export const ADD_NAME = 'ADD_NAME'

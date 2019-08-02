@@ -1,0 +1,12 @@
+@import '../../sass/variables';
+
+.Section {
+    &Head {
+        color: $color-blue;
+        text-align: center;
+
+        &::first-letter {
+            color: $color-orange-light;
+        }
+    }
+}

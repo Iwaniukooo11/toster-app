@@ -16,6 +16,7 @@ class BuilderPage extends Component {
                     clickedMinus={this.props.removeIngr}
                     ingr={this.props.ingr}
                     buildingStatus={true}
+                    showAddRemovers={true}
                 />
                 <Button text={'Dalej'} link='/login' />
             </main>

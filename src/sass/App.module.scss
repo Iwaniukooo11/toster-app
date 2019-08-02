@@ -12,9 +12,11 @@ body {
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     height: 100%;
+    font-size: 20px;
 }
 
-button {
+button,
+input {
     border: none;
     outline: none;
     font: inherit;
@@ -30,6 +32,7 @@ a {
         cursor: pointer;
     }
 }
+
 
 .line {
     color: $color-blue;
@@ -49,6 +52,41 @@ a {
     row-gap: 20px;
     position: relative;
     animation: showFadeIn .25s linear;
+
+    &Head {
+        font-size: 28px;
+        width: 70%;
+
+        &Desc {
+            max-width: 70%;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        &Big {
+            font-size: 34px;
+        }
+    }
+
+    &Form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &Input {
+        border: 2px solid $color-orange-light;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 1.5em;
+        width: 70%;
+        // width: auto;
+
+        &:focus {
+            // background-color: #eee;
+            // border-color: $color-orange-dark;
+        }
+    }
 }
 
 @keyframes showFadeIn {
