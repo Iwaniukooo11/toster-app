@@ -18,6 +18,34 @@ const AddRemoveWrap = props => {
         { title: 'Oliwki', type: 'olives', max: 4 },
         { title: 'Ogórek', type: 'cucumber', max: 2 },
     ]
+    const ingr = Object.entries(props.ingr)
+    const allIngr = []
+    // console.log(ingr)
+    ingr.forEach(element => {
+        switch (element[0]) {
+            case 'oil':
+            for(let i=0;i<element[1];i++)   
+           { allIngr.push(<Oil num={i+1} />)}
+                break
+            case 'cheese':
+                    for(let i=0;i<element[1];i++)      
+            {allIngr.push(<Cheese num={i+1} />)}
+                break
+            case 'tomato':
+                    for(let i=0;i<element[1];i++)       
+           { allIngr.push(<Tomato num={i+1} />)}
+                break
+            case 'olives':
+                    for(let i=0;i<element[1];i++)       
+           { allIngr.push(<Olives num={i+1} />)}
+                break
+            case 'cucumber':
+                    for(let i=0;i<element[1];i++)     
+            {allIngr.push(<Cucumber num={i+1} />)}
+                break
+        }
+    })
+    
 
     return (
         <div className={globStyles.AddRemoveWrap}>
@@ -29,7 +57,7 @@ const AddRemoveWrap = props => {
                     bigStyle={true}
                     breadBig={true}
                 />
-                <Oil />
+                {/* <Oil />
 
                 <Cheese num={1} />
                 <Cheese num={2} />
@@ -43,7 +71,12 @@ const AddRemoveWrap = props => {
                 <Olives num={4} />
 
                 <Cucumber num={1} />
-                <Cucumber num={2} />
+                <Cucumber num={2} /> */}
+                {/* {this.props.ingr.map} */}
+                {allIngr.map(component=>
+                    <React.Fragment>
+                    {component}
+                    </React.Fragment>)}
             </div>
         </div>
     );
