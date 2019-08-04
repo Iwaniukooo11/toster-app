@@ -2,17 +2,24 @@ import React from 'react';
 import globStyles from '../../../sass/App.module.scss'
 import locStyles from './TostCard.module.scss'
 
+import AddRemoveWrap from '../../BuilderPage/AddRemoveWrap/AddRemoveWrap'
 
 const TostCard = props => {
     const arr = Object.values(props.ingr)
     console.log(arr)
 
     return (
-        <section className={locStyles.TostCard}>
-            <h2 className={`${globStyles.SectionHead} ${globStyles.SectionHeadBig}`} >
-                {props.name}</h2>
-            <ul className={locStyles.TostCardList}>
 
+        <section className={locStyles.TostCard}>
+            <h2 className={`${globStyles.SectionHead}
+             ${globStyles.SectionHeadBig}
+            ${locStyles.TostCardName}`} >
+                <span className={locStyles.TostCardWrapName}>
+                    {props.name}
+                </span>
+            </h2>
+
+            <ul className={locStyles.TostCardList}>
                 {arr.map((el, index) => {
                     let food = null
                     switch (index) {
@@ -45,11 +52,16 @@ const TostCard = props => {
                                 {arr[index]}</span>
                         </li>
                     )
+
                 })
                 }
             </ul>
-
+            <div className={locStyles.TostCardBread}>
+                <AddRemoveWrap ingr={props.ingr} />
+            </div>
         </section>
+
+
     );
 }
 

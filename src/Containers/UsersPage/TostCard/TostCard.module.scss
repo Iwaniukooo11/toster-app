@@ -1,17 +1,53 @@
+@import '../../../sass/variables';
+
 .TostCard {
     min-width: 300px;
     width: 30%;
+    display: grid;
+    align-items: center;
+    grid-template-areas: 'name name''list bread';
+
+    &Name {
+        grid-area: name;
+        width: auto;
+
+    }
+
+    &WrapName {
+        position: relative;
+        // margin-right: 10px;
+
+        &::after {
+            @include makePseudo;
+            right: -10px;
+            top: 50%;
+            height: 80%;
+            transform: translateY(-50%);
+            width: 3px;
+            background-color: $color-orange-light;
+        }
+    }
+
+    &Bread {
+        grid-area: bread;
+        transform: scale(0.7);
+    }
 
     &Food {
         text-transform: capitalize;
     }
 
     &List {
+        grid-area: list;
         display: flex;
         flex-wrap: wrap;
 
         &Element {
             margin: 0 5px;
         }
+    }
+
+    &Name {
+        position: relative;
     }
 }

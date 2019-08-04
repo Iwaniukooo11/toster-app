@@ -51,7 +51,7 @@ const AddRemoveWrap = props => {
                 </Fragment>
                 : null}
 
-            <div className={locStyles.Bread}>
+            <div className={`${locStyles.Bread}`}>
                 <Bread breadStatus={true}
                     doneStyle={true}
                     bigStyle={true}
