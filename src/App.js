@@ -9,11 +9,13 @@ import { Route, BrowserRouter } from 'react-router-dom'
 import HomePage from './Containers/HomePage/HomePage'
 import BuilderPage from './Containers/BuilderPage/BuilderPage'
 import LoginPage from './Containers/LoginPage/LoginPage'
+import UsersPage from './Containers/UsersPage/UsersPage'
 
 const routes = [
   { path: '', name: 'Home', Component: HomePage },
   { path: 'builder', name: 'Builder', Component: BuilderPage },
   { path: 'login', name: 'Login', Component: LoginPage },
+  { path: 'users', name: 'users', Component: UsersPage },
 ]
 
 function App() {

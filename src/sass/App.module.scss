@@ -87,6 +87,14 @@ a {
             // border-color: $color-orange-dark;
         }
     }
+
+    &MiniOpacityText {
+        font-size: 0.75em;
+        text-transform: lowercase;
+        // color: $color-grey;
+        opacity: 0.5;
+        display: inline-block;
+    }
 }
 
 @keyframes showFadeIn {
