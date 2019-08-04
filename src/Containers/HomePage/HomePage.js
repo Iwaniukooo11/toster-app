@@ -30,7 +30,7 @@ class HomePage extends Component {
                 {this.props.isTostingDone ?
                     <>
                         <hr className={globStyles.line} />
-                        <NextButton text={'dalej'} link={'/builder'} />
+                        <NextButton link={'/builder'} >Dalej</NextButton>
                     </>
                     : null}
 

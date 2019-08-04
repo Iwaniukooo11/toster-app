@@ -6,12 +6,12 @@ const Button = props => {
 
 
 
-    const btn = <button className={locStyles.Button} onClick={props.clicked}>{props.text}</button>
+    const btn = <button className={locStyles.Button} onClick={props.clicked}>{props.children}</button>
     return (
         props.link ?
             <button className={locStyles.Button} onClick={props.clicked}>
                 <Link to={props.link}>
-                    {props.text}
+                    {props.children}
                 </Link>
             </button > : btn
     );

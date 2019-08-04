@@ -18,7 +18,7 @@ class BuilderPage extends Component {
                     buildingStatus={true}
                     showAddRemovers={true}
                 />
-                <Button text={'Dalej'} link='/login' />
+                <Button link='/login'>Dalej</Button>
             </main>
         );
     }

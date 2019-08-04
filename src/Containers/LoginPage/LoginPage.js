@@ -8,33 +8,37 @@ import Button from '../../Components/Button/Button'
 
 class LoginPage extends Component {
 
-
     inputTextHandler = event => {
         const _name = event.target.value
         this.props.addName(_name)
     }
 
     render() {
-        return (<main className={globStyles.Section}>
-            <h2 className={`${globStyles.SectionHead} ${globStyles.SectionHeadBig} ${locStyles.SectionHead}`}>Tak wygląda twój tost</h2>
+        return (
+            <main className={globStyles.Section}>
 
-            <p className={globStyles.SectionHeadDesc}>Możesz wrócić do poprzedniej sekcji i jeszcze go zmienić.Jeśli podoba Ci się tost,podpisz się pod nim!</p>
+                <h2 className={`${globStyles.SectionHead} ${globStyles.SectionHeadBig} ${locStyles.SectionHead}`}>Tak wygląda twój tost</h2>
 
-            <Tost ingr={this.props.ingr} />
+                <Button link={'/builder'}>
+                    <i className="fas fa-arrow-left"></i>
+                </Button>
 
-            <form action="" className={globStyles.SectionForm}>            
-                <input type="text"
-                    className={globStyles.SectionInput}
-                    placeholder='Imię'
-                    value={this.props.name}
-                    onChange={this.inputTextHandler}
-                />
-            </form>
+                <p className={globStyles.SectionHeadDesc}>Możesz wrócić do poprzedniej sekcji i jeszcze go zmienić.Jeśli podoba Ci się tost,podpisz się imieniem lub swoją ksywką!</p>
 
-            <Button text={'Dalej'}
-                // clicked={}
-                 />
-        </main>);
+                <Tost ingr={this.props.ingr} />
+
+                <form action="" className={globStyles.SectionForm}>
+                    <input type="text"
+                        className={globStyles.SectionInput}
+                        placeholder='Podpisz się!'
+                        value={this.props.name}
+                        onChange={this.inputTextHandler}
+                    />
+                </form>
+
+                <Button >Dalej</Button>
+            </main>
+        );
     }
 }
 const mapStateToProps = state => {
