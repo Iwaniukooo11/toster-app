@@ -44,7 +44,6 @@ const AddRemoveWrap = props => {
     return (
 
         <div className={globStyles.AddRemoveWrap}>
-            <h1>test</h1>
             {props.showAddRemovers ?
                 <Fragment>
                     {addRemovers.map(obj => <AddRemover title={obj.title} key={obj.type} {...props} ingrType={obj.type} max={obj.max} />)}

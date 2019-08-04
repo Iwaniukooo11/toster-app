@@ -8,9 +8,13 @@
 
     &Text {
         text-transform: capitalize;
+        // vertical-align: middle;
+        // display: flex;
+        // align-items: center;
 
-        &Little {
-            
+        &Center {
+            display: flex;
+            align-items: center;
         }
     }
 
