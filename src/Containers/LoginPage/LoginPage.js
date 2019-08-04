@@ -5,12 +5,21 @@ import locStyles from './LoginPage.module.scss'
 import * as actionTypes from '../../store/actionTypes'
 import Tost from '../BuilderPage/AddRemoveWrap/AddRemoveWrap'
 import Button from '../../Components/Button/Button'
+import firebase from '../../firebase'
 
 class LoginPage extends Component {
 
     inputTextHandler = event => {
         const _name = event.target.value
         this.props.addName(_name)
+    }
+    pushToDataBaseHandler = () => {
+        const obj = {
+            name: this.props.name,
+            ingr: { ...this.props.ingr }
+        }
+        console.log(firebase)
+        firebase.database().ref('tosts/').push(obj)
     }
 
     render() {
@@ -36,7 +45,7 @@ class LoginPage extends Component {
                     />
                 </form>
 
-                <Button >Dalej</Button>
+                <Button link={'./users'} clicked={this.pushToDataBaseHandler}>Dalej</Button>
             </main>
         );
     }

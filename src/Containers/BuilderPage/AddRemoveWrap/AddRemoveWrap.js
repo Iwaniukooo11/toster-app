@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import globStyles from '../../../sass/App.module.scss'
 import locStyles from './AddRemoveWrap.module.scss'
-import AddRemover from '../../../Components/AddRemover/AddRemover'
+import AddRemover from './AddRemoveWrap'
 
 import Bread from '../../../Components/FoodElements/Bread/Bread'
 import Oil from '../../../Components/FoodElements/Oil/Oil'

@@ -1,0 +1,17 @@
+.TostCard {
+    min-width: 300px;
+    width: 30%;
+
+    &Food {
+        text-transform: capitalize;
+    }
+
+    &List {
+        display: flex;
+        flex-wrap: wrap;
+
+        &Element {
+            margin: 0 5px;
+        }
+    }
+}

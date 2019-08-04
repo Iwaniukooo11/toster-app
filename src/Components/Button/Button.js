@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 
 const Button = props => {
 
-
-
     const btn = <button className={locStyles.Button} onClick={props.clicked}>{props.children}</button>
     return (
         props.link ?

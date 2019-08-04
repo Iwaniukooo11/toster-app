@@ -7,7 +7,7 @@ import Button from '../../Components/Button/Button'
 import * as actionTypes from '../../store/actionTypes'
 import { connect } from 'react-redux'
 class BuilderPage extends Component {
-    state = {}
+
     render() {
         return (
             <main className={`${globStyles.Section}`}>
