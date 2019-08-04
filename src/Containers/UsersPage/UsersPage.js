@@ -7,29 +7,24 @@ import TostCard from './TostCard/TostCard'
 
 class UsersPage extends Component {
     state = {
-        tosts: []
+        tosts: [],
+        isDone: false,
     }
 
     componentDidMount() {
         firebase.database().ref('tosts/').once('value')
             .then(e => {
-                // console.log(e.val())
                 return e.val()
             })
             .then(e => {
-                // this.setState({ tosts: e })
-                // console.log(this.state)
-                // this.setState({ tosts: Object.entries(e) })
-                // console.log(Object.entries(this.state.tosts))
                 const test = Object.entries(e).map(el => {
-                    // console.log(el[1].ingr)
-                    // console.log(el[1].name)
                     return { name: el[1].name, ingr: el[1].ingr }
                 })
 
                 //ZROBIC OD TYŁU
-                this.setState({ tosts: test })
-                // console.log(this.state.tosts)
+                // setTimeout(() => this.setState({ tosts: test }), 500)
+                this.setState({ tosts: test, isDone: true })
+
             })
     }
 
@@ -39,7 +34,7 @@ class UsersPage extends Component {
 
         return (<main className={`${globStyles.Section}`}>
             {/* <div className={locStyles.SectionCardWrap}> */}
-            {this.state.tosts ?
+            {this.state.isDone ?
                 this.state.tosts.map(el =>
                     <TostCard key={el.name} name={el.name} ingr={el.ingr} />
                 ) : <div className={spinner.Loader}></div>}

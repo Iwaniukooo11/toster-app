@@ -7,6 +7,11 @@ import Button from '../../Components/Button/Button'
 import * as actionTypes from '../../store/actionTypes'
 import { connect } from 'react-redux'
 class BuilderPage extends Component {
+    // render() {
+    //     return (
+    //         <h1> test</h1>
+    //     )
+    // }
 
     render() {
         return (
@@ -42,3 +47,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BuilderPage);
+// export default BuilderPage

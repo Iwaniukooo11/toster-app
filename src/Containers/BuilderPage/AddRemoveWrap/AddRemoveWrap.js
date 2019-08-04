@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import globStyles from '../../../sass/App.module.scss'
 import locStyles from './AddRemoveWrap.module.scss'
-import AddRemover from './AddRemoveWrap'
+import AddRemover from '../../../Components/AddRemover/AddRemover'
 
 import Bread from '../../../Components/FoodElements/Bread/Bread'
 import Oil from '../../../Components/FoodElements/Oil/Oil'
@@ -44,12 +44,12 @@ const AddRemoveWrap = props => {
     return (
 
         <div className={globStyles.AddRemoveWrap}>
-
+            <h1>test</h1>
             {props.showAddRemovers ?
-                <>
+                <Fragment>
                     {addRemovers.map(obj => <AddRemover title={obj.title} key={obj.type} {...props} ingrType={obj.type} max={obj.max} />)}
                     < hr className={globStyles.line} />
-                </>
+                </Fragment>
                 : null}
 
             <div className={locStyles.Bread}>
