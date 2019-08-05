@@ -90,6 +90,14 @@ li {
             // background-color: #eee;
             // border-color: $color-orange-dark;
         }
+
+        &Right {
+            border-color: $color-green;
+        }
+
+        &Wrong {
+            border-color: $color-red-dark;
+        }
     }
 
     &MiniOpacityText {

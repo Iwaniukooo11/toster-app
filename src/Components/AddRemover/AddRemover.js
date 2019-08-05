@@ -10,6 +10,7 @@ const AddRemover = props => {
             ${props.max ? locStyles.AddRemovertextCenter : null}
             `}>
                 {props.title}
+                {/* <br /> */}
                 <span className={`${locStyles.AddRemoverTextLittle} ${globStyles.SectionMiniOpacityText}`}>
                     {props.max ? `(max ${props.max})` : null}
                 </span>

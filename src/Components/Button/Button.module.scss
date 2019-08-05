@@ -11,6 +11,12 @@
     transition: .1s;
     animation: Anim .2s linear;
 
+    &:disabled {
+        background-color: $color-grey-light;
+        color: $color-grey-dark;
+        box-shadow: inset -3px -4px 0px 1px $color-grey-dark;
+    }
+
     &:active {
         transform: scale(0.9);
     }

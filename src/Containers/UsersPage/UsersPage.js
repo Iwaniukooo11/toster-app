@@ -18,12 +18,10 @@ class UsersPage extends Component {
             })
             .then(e => {
                 const test = Object.entries(e).map(el => {
-                    return { name: el[1].name, ingr: el[1].ingr }
+                    return { name: el[1].name, ingr: el[1].ingr, date: el[1].date }
                 })
 
-                //ZROBIC OD TYŁU
-                // setTimeout(() => this.setState({ tosts: test }), 500)
-                this.setState({ tosts: test, isDone: true })
+                this.setState({ tosts: test.reverse(), isDone: true })
 
             })
     }
@@ -34,9 +32,12 @@ class UsersPage extends Component {
 
         return (<main className={`${globStyles.Section}`}>
             {/* <div className={locStyles.SectionCardWrap}> */}
+            {/* <h2 className={`${globStyles.SectionHead} ${globStyles.SectionHeadBig} ${locStyles.SectionHead}`}>Smacznego!</h2>
+            <p className={globStyles.SectionDesc}>Dzięki za zrobienie tosta,tu będzie link do od początku!</p> */}
+
             {this.state.isDone ?
                 this.state.tosts.map(el =>
-                    <TostCard key={el.name} name={el.name} ingr={el.ingr} />
+                    <TostCard key={el.name} name={el.name} date={el.date} ingr={el.ingr} />
                 ) : <div className={spinner.Loader}></div>}
 
             {/* </div> */}

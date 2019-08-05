@@ -17,7 +17,12 @@ const TostCard = props => {
                 <span className={locStyles.TostCardWrapName}>
                     {props.name}
                 </span>
+
             </h2>
+            <span className={locStyles.TostCardDate}>
+                {/* < br /> */}
+                {props.date}
+            </span>
 
             <ul className={locStyles.TostCardList}>
                 {arr.map((el, index) => {

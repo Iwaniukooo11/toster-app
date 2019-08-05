@@ -5,16 +5,32 @@
     width: 30%;
     display: grid;
     align-items: center;
-    grid-template-areas: 'name name''list bread';
+    // grid-template-columns: 60% 40%;
+    grid-template-areas: 'name name''date bread''list bread';
 
     &Name {
+        position: relative;
         grid-area: name;
         width: auto;
+        // display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
 
+    &Date {
+        // font-size: 0.7em;
+        // color: $color-orange-light
+        color: $color-blue;
+        height: auto;
+        grid-area: date;
+        white-space: nowrap;
     }
 
     &WrapName {
         position: relative;
+        // display: block;
+        white-space: nowrap;
         // margin-right: 10px;
 
         &::after {
@@ -29,8 +45,12 @@
     }
 
     &Bread {
+
         grid-area: bread;
-        transform: scale(0.7);
+        transform: scale(0.7) translateX(-25%);
+        align-self: flex-end;
+        justify-self: flex-start;
+        margin-right: auto;
     }
 
     &Food {
@@ -39,15 +59,16 @@
 
     &List {
         grid-area: list;
+        align-self: flex-start;
         display: flex;
         flex-wrap: wrap;
 
         &Element {
-            margin: 0 5px;
+            margin-right: 5px;
         }
     }
 
-    &Name {
-        position: relative;
+    &Quantity {
+        font-family: 'B612 Mono', monospace;
     }
 }

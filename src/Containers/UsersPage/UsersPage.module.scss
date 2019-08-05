@@ -1,7 +1,9 @@
-.SectionCardWrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+@import '../../sass/variables';
 
+.Section {
+    &Head {
+        color: $color-blue;
+        text-align: center;
+        font-size: 2em;
+    }
 }
