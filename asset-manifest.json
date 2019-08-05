@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/toster-builder/static/css/main.5a1b9464.chunk.css",
-    "main.js": "/toster-builder/static/js/main.b261dce4.chunk.js",
-    "main.js.map": "/toster-builder/static/js/main.b261dce4.chunk.js.map",
-    "runtime~main.js": "/toster-builder/static/js/runtime~main.254f0494.js",
-    "runtime~main.js.map": "/toster-builder/static/js/runtime~main.254f0494.js.map",
-    "static/js/2.e5d2f3d7.chunk.js": "/toster-builder/static/js/2.e5d2f3d7.chunk.js",
-    "static/js/2.e5d2f3d7.chunk.js.map": "/toster-builder/static/js/2.e5d2f3d7.chunk.js.map",
-    "index.html": "/toster-builder/index.html",
-    "precache-manifest.5207adceaaf387164d04ab94ddf4be9d.js": "/toster-builder/precache-manifest.5207adceaaf387164d04ab94ddf4be9d.js",
-    "service-worker.js": "/toster-builder/service-worker.js",
-    "static/css/main.5a1b9464.chunk.css.map": "/toster-builder/static/css/main.5a1b9464.chunk.css.map"
+    "main.css": "/toster-app/static/css/main.5a1b9464.chunk.css",
+    "main.js": "/toster-app/static/js/main.63055a8d.chunk.js",
+    "main.js.map": "/toster-app/static/js/main.63055a8d.chunk.js.map",
+    "runtime~main.js": "/toster-app/static/js/runtime~main.dfae09aa.js",
+    "runtime~main.js.map": "/toster-app/static/js/runtime~main.dfae09aa.js.map",
+    "static/js/2.b61e40c7.chunk.js": "/toster-app/static/js/2.b61e40c7.chunk.js",
+    "static/js/2.b61e40c7.chunk.js.map": "/toster-app/static/js/2.b61e40c7.chunk.js.map",
+    "index.html": "/toster-app/index.html",
+    "precache-manifest.52d7fbd0fc3e47d68dd26e34ced3d534.js": "/toster-app/precache-manifest.52d7fbd0fc3e47d68dd26e34ced3d534.js",
+    "service-worker.js": "/toster-app/service-worker.js",
+    "static/css/main.5a1b9464.chunk.css.map": "/toster-app/static/css/main.5a1b9464.chunk.css.map"
   }
 }
