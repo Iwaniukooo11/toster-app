@@ -10,7 +10,7 @@ const TostCard = props => {
 
     return (
 
-        <section className={locStyles.TostCard}>
+        <li className={locStyles.TostCard}>
             <h2 className={`${globStyles.SectionHead}
              ${globStyles.SectionHeadBig}
             ${locStyles.TostCardName}`} >
@@ -64,7 +64,7 @@ const TostCard = props => {
             <div className={locStyles.TostCardBread}>
                 <AddRemoveWrap ingr={props.ingr} />
             </div>
-        </section>
+        </li>
 
 
     );

@@ -2,8 +2,10 @@
 
 .TostCard {
     min-width: 300px;
+    box-sizing: content-box;
     width: 30%;
     display: grid;
+    padding: 10px 20px ;
     align-items: center;
     // grid-template-columns: 60% 40%;
     grid-template-areas: 'name name''date bread''list bread';

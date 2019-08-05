@@ -4,11 +4,13 @@ import locStyles from './UsersPage.module.scss'
 import spinner from './spinners.module.scss'
 import firebase from '../../firebase'
 import TostCard from './TostCard/TostCard'
+import Button from '../../Components/Button/Button'
 
 class UsersPage extends Component {
     state = {
         tosts: [],
         isDone: false,
+        isError: false,
     }
 
     componentDidMount() {
@@ -22,8 +24,8 @@ class UsersPage extends Component {
                 })
 
                 this.setState({ tosts: test.reverse(), isDone: true })
-
             })
+            .catch(() => this.setState({ isError: true }))
     }
 
 
@@ -32,14 +34,25 @@ class UsersPage extends Component {
 
         return (<main className={`${globStyles.Section}`}>
             {/* <div className={locStyles.SectionCardWrap}> */}
-            {/* <h2 className={`${globStyles.SectionHead} ${globStyles.SectionHeadBig} ${locStyles.SectionHead}`}>Smacznego!</h2>
-            <p className={globStyles.SectionDesc}>Dzięki za zrobienie tosta,tu będzie link do od początku!</p> */}
+            <h2 className={`${globStyles.SectionHead} 
+            ${locStyles.SectionHead}`}>Tosty innych użytkowników
+            </h2>
+            <Button link='/'>Upiecz Tosta</Button>
 
-            {this.state.isDone ?
-                this.state.tosts.map(el =>
-                    <TostCard key={el.name} name={el.name} date={el.date} ingr={el.ingr} />
-                ) : <div className={spinner.Loader}></div>}
+            {/*<p className={globStyles.SectionDesc}>Dzięki za zrobienie tosta,tu będzie link do od początku!</p> */}
 
+            {this.state.isDone && !this.state.isError ?
+
+                <ul className={locStyles.SectionTostsList}>
+                    {this.state.tosts.map(el =>
+                        <TostCard key={el.name} name={el.name} date={el.date} ingr={el.ingr} />
+                    )}
+                </ul> :
+                <div className={spinner.Loader}></div>}
+
+
+            {this.state.isError ?
+                <h2 className={`{${globStyles.SectionHead} ${globStyles.SectionHeadError}`}>Error:coś poszło nie tak.Spróbuj ponownie później</h2> : null}
             {/* </div> */}
         </main>
         )
