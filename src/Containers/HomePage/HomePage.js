@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import locStyles from './HomePage.module.scss'
 import globStyles from '../../sass/App.module.scss'
 
 import AddRemoverWrap from './AddRemoveWrap/AddRemoveWrap'
@@ -12,12 +11,7 @@ import { connect } from 'react-redux'
 import * as actionTypes from '../../store/actionTypes'
 
 class HomePage extends Component {
-    // componentDidMount() {
-    //     this.props.endSelecting(false)
-    //     this.props.doneTosting(false)
-    //     this.props.toggleBreadSelect()
-    //     console.log(this.props)
-    // }
+
     render() {
         return (
             <main className={`${globStyles.Section}`}>
@@ -54,8 +48,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         toggleBreadSelect: () => dispatch({ type: actionTypes.TOGGLE_SELECT_HOME_BREAD }),
-        endSelecting: (to = true) => dispatch({ type: actionTypes.END_SELECTING, to: to }),
-        doneTosting: (to = true) => dispatch({ type: actionTypes.DONE_TOSTING, to: to })
+        endSelecting: () => dispatch({ type: actionTypes.END_SELECTING, }),
+        doneTosting: () => dispatch({ type: actionTypes.DONE_TOSTING, })
     }
 }
 

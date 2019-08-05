@@ -29,7 +29,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 homePage: {
                     ...state.homePage,
-                    isSelectingEnded: action.to
+                    isSelectingEnded: true
                 }
             }
         case actionTypes.DONE_TOSTING:
@@ -37,7 +37,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 homePage: {
                     ...state.homePage,
-                    isTostingDone: action.to
+                    isTostingDone: true
                 }
             }
         case actionTypes.ADD_INGR:

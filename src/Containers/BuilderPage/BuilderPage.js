@@ -8,6 +8,10 @@ import Button from '../../Components/Button/Button'
 import * as actionTypes from '../../store/actionTypes'
 
 class BuilderPage extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     render() {
         return (
             <main className={`${globStyles.Section}`}>

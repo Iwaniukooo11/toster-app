@@ -38,6 +38,10 @@ class LoginPage extends Component {
         }
         firebase.database().ref('tosts/').push(obj)
     }
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
 
     render() {
         const classInput = []
