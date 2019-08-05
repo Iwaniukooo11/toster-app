@@ -19,7 +19,7 @@ class LoginPage extends Component {
     inputTextHandler = event => {
         const _name = event.target.value
         this.props.addName(_name)
-        if (_name.length <= 12 && _name.length > 4) {
+        if (_name.length <= 12 && _name.length > 3) {
             this.setState({ isValid: true })
         }
         else {
@@ -30,6 +30,7 @@ class LoginPage extends Component {
         const date = new Date()
         const minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
         const hours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
+
         const obj = {
             date: `${hours}:${minutes} ${date.toJSON().slice(0, 10).split('-').reverse().join('-')}`,
             name: this.props.name,
@@ -37,12 +38,6 @@ class LoginPage extends Component {
         }
         firebase.database().ref('tosts/').push(obj)
     }
-    // componentDidMount() {
-    //     //test!
-    //     const date = new Date()
-    //     console.log(date.toDateString())
-    //     console.log(date.toJSON().slice(0, 10).split('-').reverse().join('-'))
-    // }
 
     render() {
         const classInput = []
@@ -62,8 +57,11 @@ class LoginPage extends Component {
                     <i className="fas fa-arrow-left"></i>
                 </Button>
 
-                <p className={globStyles.SectionHeadDesc}>Możesz wrócić do poprzedniej sekcji i jeszcze go zmienić.Jeśli podoba Ci się tost,podpisz się imieniem lub swoją ksywką!
-                <br /> <span className={locStyles.SectionMiniTxt}>(od 4 do 12 znaków)</span></p>
+                <p className={globStyles.SectionHeadDesc}>
+                    Możesz wrócić do poprzedniej sekcji i jeszcze go zmienić.Jeśli podoba Ci się tost,podpisz się imieniem lub swoją ksywką!
+                <br />
+                    <span className={locStyles.SectionMiniTxt}>(od 4 do 12 znaków)</span>
+                </p>
 
                 <Tost ingr={this.props.ingr} />
 

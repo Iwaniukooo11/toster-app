@@ -16,9 +16,6 @@ class UsersPage extends Component {
     }
 
     componentDidMount() {
-        // this.props.endSelecting(false)
-        // this.props.doneTosting(false)
-        // this.props.toggleBreadSelect()
         this.props.reset()
 
         firebase.database().ref('tosts/').once('value')
@@ -37,16 +34,11 @@ class UsersPage extends Component {
 
 
     render() {
-
-
         return (<main className={`${globStyles.Section}`}>
-            {/* <div className={locStyles.SectionCardWrap}> */}
             <h2 className={`${globStyles.SectionHead} 
             ${locStyles.SectionHead}`}>Tosty innych użytkowników
             </h2>
             <Button link='/'>Upiecz Tosta</Button>
-
-            {/*<p className={globStyles.SectionDesc}>Dzięki za zrobienie tosta,tu będzie link do od początku!</p> */}
 
             {this.state.isDone && !this.state.isError ?
 
@@ -59,8 +51,8 @@ class UsersPage extends Component {
 
 
             {this.state.isError ?
-                <h2 className={`{${globStyles.SectionHead} ${globStyles.SectionHeadError}`}>Error:coś poszło nie tak.Spróbuj ponownie później</h2> : null}
-            {/* </div> */}
+                <h2 className={`{${globStyles.SectionHead} ${globStyles.SectionHeadError}`}>
+                    Error:coś poszło nie tak.Spróbuj ponownie później</h2> : null}
         </main>
         )
     }
@@ -68,16 +60,11 @@ class UsersPage extends Component {
 
 const mapStateToProps = state => {
     return {
-        isBreadSelect: state.homePage.isBreadSelect,
-        isSelectingEnded: state.homePage.isSelectingEnded,
-        isTostingDone: state.homePage.isTostingDone
+
     }
 }
 const mapDispatchToProps = dispatch => {
     return {
-        toggleBreadSelect: (to = true) => dispatch({ type: actionTypes.TOGGLE_SELECT_HOME_BREAD, to: to }),
-        endSelecting: (to = true) => dispatch({ type: actionTypes.END_SELECTING, to: to }),
-        doneTosting: (to = true) => dispatch({ type: actionTypes.DONE_TOSTING, to: to }),
         reset: () => dispatch({ type: actionTypes.RESET })
     }
 }

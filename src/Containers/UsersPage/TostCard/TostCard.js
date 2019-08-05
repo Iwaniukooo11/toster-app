@@ -6,10 +6,7 @@ import AddRemoveWrap from '../../BuilderPage/AddRemoveWrap/AddRemoveWrap'
 
 const TostCard = props => {
     const arr = Object.values(props.ingr)
-    console.log(arr)
-
     return (
-
         <li className={locStyles.TostCard}>
             <h2 className={`${globStyles.SectionHead}
              ${globStyles.SectionHeadBig}
@@ -20,7 +17,6 @@ const TostCard = props => {
 
             </h2>
             <span className={locStyles.TostCardDate}>
-                {/* < br /> */}
                 {props.date}
             </span>
 

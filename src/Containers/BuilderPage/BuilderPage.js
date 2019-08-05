@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import globStyles from '../../sass/App.module.scss'
 
 import AddRemoverWrap from './AddRemoveWrap/AddRemoveWrap'
 import Button from '../../Components/Button/Button'
 
 import * as actionTypes from '../../store/actionTypes'
-import { connect } from 'react-redux'
-class BuilderPage extends Component {
-    // render() {
-    //     return (
-    //         <h1> test</h1>
-    //     )
-    // }
 
+class BuilderPage extends Component {
     render() {
         return (
             <main className={`${globStyles.Section}`}>
@@ -47,4 +42,3 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BuilderPage);
-// export default BuilderPage

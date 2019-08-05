@@ -15,9 +15,6 @@ const initialState = {
     name: ''
 }
 const reducer = (state = initialState, action) => {
-    // console.log('reducer')
-    console.log(state.homePage)
-    console.log(action)
     switch (action.type) {
         case actionTypes.TOGGLE_SELECT_HOME_BREAD:
             return {
@@ -25,7 +22,6 @@ const reducer = (state = initialState, action) => {
                 homePage: {
                     ...state.homePage,
                     isBreadSelect: !state.homePage.isBreadSelect
-                    // isBreadSelect:action.to
                 }
             }
         case actionTypes.END_SELECTING:
@@ -33,7 +29,6 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 homePage: {
                     ...state.homePage,
-                    // isSelectingEnded: true
                     isSelectingEnded: action.to
                 }
             }
@@ -42,7 +37,6 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 homePage: {
                     ...state.homePage,
-                    // isTostingDone: true
                     isTostingDone: action.to
                 }
             }

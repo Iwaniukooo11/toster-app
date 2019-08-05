@@ -5,24 +5,17 @@
     box-sizing: content-box;
     width: 30%;
     display: grid;
-    padding: 10px 20px ;
+    padding: 10px 20px;
     align-items: center;
-    // grid-template-columns: 60% 40%;
     grid-template-areas: 'name name''date bread''list bread';
 
     &Name {
         position: relative;
         grid-area: name;
         width: auto;
-        // display: flex;
-        flex-direction: column;
-        justify-content: center;
-        justify-items: center;
     }
 
     &Date {
-        // font-size: 0.7em;
-        // color: $color-orange-light
         color: $color-blue;
         height: auto;
         grid-area: date;
@@ -31,9 +24,7 @@
 
     &WrapName {
         position: relative;
-        // display: block;
         white-space: nowrap;
-        // margin-right: 10px;
 
         &::after {
             @include makePseudo;
@@ -49,7 +40,7 @@
     &Bread {
 
         grid-area: bread;
-        transform: scale(0.7) translateX(-25%);
+        transform: scale(0.7);
         align-self: flex-end;
         justify-self: flex-start;
         margin-right: auto;

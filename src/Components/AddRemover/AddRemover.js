@@ -6,11 +6,12 @@ import Sign from './Signs/Sign'
 const AddRemover = props => {
     return (
         <div className={locStyles.AddRemover}>
-            <h2 className={`${locStyles.AddRemoverText} ${globStyles.SectionHead}
+            <h2 className={`${locStyles.AddRemoverText} 
+            ${globStyles.SectionHead}
             ${props.max ? locStyles.AddRemovertextCenter : null}
             `}>
                 {props.title}
-                {/* <br /> */}
+                {props.max ? <br /> : null}
                 <span className={`${locStyles.AddRemoverTextLittle} ${globStyles.SectionMiniOpacityText}`}>
                     {props.max ? `(max ${props.max})` : null}
                 </span>

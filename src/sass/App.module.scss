@@ -89,12 +89,6 @@ li {
         border-radius: 10px;
         font-size: 1.2em;
         width: 70%;
-        // width: auto;
-
-        &:focus {
-            // background-color: #eee;
-            // border-color: $color-orange-dark;
-        }
 
         &Right {
             border-color: $color-green;
@@ -108,13 +102,8 @@ li {
     &MiniOpacityText {
         font-size: 20px;
         text-transform: lowercase;
-        // color: $color-grey;
         opacity: 0.5;
         display: inline-block;
-
-        // &Big {
-        //     font-size: 24px;
-        // }
     }
 }
 

@@ -6,14 +6,7 @@ const Sign = props => {
     let disabled = false
     let clicked = props.clicked
 
-    // if (props.type === 'Plus' && props.breadStatus)
-    //     disabled = true
-    // else if (props.type === 'Minus' && !props.breadStatus)
-    //     disabled = true
-    // else if (props.type === 'One' && !props.breadStatus)
-    //     disabled = true
-
-    switch (props.type) {
+       switch (props.type) {
         case 'Plus':
             disabled = props.breadStatus
             break
