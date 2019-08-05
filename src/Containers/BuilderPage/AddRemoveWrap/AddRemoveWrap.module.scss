@@ -9,3 +9,41 @@
     margin: 0 auto;
 
 }
+
+.WrapList {
+    width: 100%;
+}
+
+
+@media(min-width:450px) {
+    .Bread {
+        // width: $bread-size-big-450;
+        width: auto;
+    }
+}
+
+@media(min-width:86px) {
+    .WrapList {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media(min-width:860px) {
+    .WrapList {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+}
+
+@media(min-width:1024px) {
+    .Build {
+        grid-template-areas: 'addRemove tost';
+        grid-template-rows: auto;
+    }
+
+    .Bread {
+        height: $bread-size-big-640;
+        align-self: center;
+    }
+}

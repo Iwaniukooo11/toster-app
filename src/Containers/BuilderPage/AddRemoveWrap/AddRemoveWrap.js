@@ -43,12 +43,12 @@ const AddRemoveWrap = props => {
 
     return (
 
-        <div className={globStyles.AddRemoveWrap}>
+        <div className={`${globStyles.AddRemoveWrap} ${props.build ? locStyles.Build : null}`}>
             {props.showAddRemovers ?
-                <Fragment>
+                <div className={locStyles.WrapList}>
                     {addRemovers.map(obj => <AddRemover title={obj.title} key={obj.type} {...props} ingrType={obj.type} max={obj.max} />)}
                     < hr className={globStyles.line} />
-                </Fragment>
+                </div>
                 : null}
 
             <div className={`${locStyles.Bread}`}>

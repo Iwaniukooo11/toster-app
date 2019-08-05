@@ -14,3 +14,15 @@
         opacity: 1;
     }
 }
+
+@media(min-width:640px) {
+    .Number {
+        font-size: 200px;
+    }
+}
+
+@media(min-width:768px) {
+    .Number {
+        grid-area: num;
+    }
+}

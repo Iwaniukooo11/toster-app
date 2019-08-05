@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import globStyles from '../../sass/App.module.scss'
+import locStyles from './BuilderPage.module.scss'
 
 import AddRemoverWrap from './AddRemoveWrap/AddRemoveWrap'
 import Button from '../../Components/Button/Button'
@@ -14,8 +15,9 @@ class BuilderPage extends Component {
 
     render() {
         return (
-            <main className={`${globStyles.Section}`}>
+            <main className={`${globStyles.Section} ${locStyles.BuilderPage}`}>
                 <AddRemoverWrap
+                    build={true}
                     clickedPlus={this.props.addIngr}
                     clickedMinus={this.props.removeIngr}
                     ingr={this.props.ingr}

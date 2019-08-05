@@ -65,3 +65,9 @@
         font-family: 'B612 Mono', monospace;
     }
 }
+
+@media(min-width:640px) {
+    .TostCard {
+        min-width: 385px;
+    }
+}

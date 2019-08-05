@@ -20,11 +20,25 @@ $color-bread-end-strong:rgb(97, 75, 68);
 $color-bread-end:#8D6E63;
 
 $sign-size:55px;
+$sign-size-640:65px;
+
 $nav-size:55px;
+
 $footer-size:35px;
+
 $bread-size:16vw;
+$bread-size-450:20vw;
+$bread-size-640:190px;
+
 $bread-size-big:40vw;
+$bread-size-big-450:45vw;
+$bread-size-big-640:300px;
+// $bread-size-big-640:230px;
+
+
 $toster-size:#{2 * $bread-size};
+$toster-size-450:#{2 * $bread-size-450};
+$toster-size-640:#{1.5 * $bread-size-640};
 
 $bread-select-transition:.1s;
 

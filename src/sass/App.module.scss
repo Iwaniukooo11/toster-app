@@ -1,5 +1,6 @@
 @import './variables';
 
+
 *,
 *::after,
 *::before {
@@ -41,6 +42,7 @@ li {
 .line {
     color: $color-blue;
     width: 90%;
+    max-width: 900px;
     margin: 0 auto;
     border: 0;
     border-bottom: 3px solid $color-blue;
@@ -48,6 +50,8 @@ li {
 
 .Section {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding-top: #{$nav-size + 20px};
     padding-bottom: #{$footer-size + 20px};
     display: grid;
@@ -129,4 +133,7 @@ li {
     display: grid;
     row-gap: 20px;
     width: 85%;
+    // justify-content: center;
 }
+
+@import './appMedia.module';

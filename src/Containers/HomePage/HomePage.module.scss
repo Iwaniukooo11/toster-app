@@ -1,0 +1,10 @@
+@media(min-width:768px) {
+    .HomePage {
+        grid-template-areas: 'addRemove addRemove''num tost''num tost';
+        align-items: center;
+    }
+
+    .line {
+        grid-column: 1 / -1;
+    }
+}

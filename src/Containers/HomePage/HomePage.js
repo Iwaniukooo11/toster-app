@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import globStyles from '../../sass/App.module.scss'
+import locStyles from './HomePage.module.scss'
 
 import AddRemoverWrap from './AddRemoveWrap/AddRemoveWrap'
 import Number from './Number/Number'
@@ -14,7 +15,7 @@ class HomePage extends Component {
 
     render() {
         return (
-            <main className={`${globStyles.Section}`}>
+            <main className={`${globStyles.Section} ${locStyles.HomePage}`}>
                 <AddRemoverWrap
                     breadStatus={this.props.isBreadSelect}
                     selectStatus={this.props.isSelectingEnded}
@@ -29,7 +30,7 @@ class HomePage extends Component {
                     selectStatus={this.props.isSelectingEnded} />
                 {this.props.isTostingDone ?
                     <>
-                        <hr className={globStyles.line} />
+                        <hr className={`${globStyles.line} ${locStyles.line}`} />
                         <NextButton link={'/builder'} >Dalej</NextButton>
                     </>
                     : null}

@@ -10,6 +10,7 @@
     box-shadow: inset -3px -4px 0px 1px $color-orange-dark;
     transition: .1s;
     animation: Anim .2s linear;
+    grid-column: 1 / -1;
 
     &:disabled {
         background-color: $color-grey-light;
@@ -29,5 +30,18 @@
 
     to {
         opacity: 1;
+    }
+}
+
+@media(min-width:640px) {
+    .Button {
+        font-size: 32px;
+    }
+}
+
+@media(min-width:768px) {
+    .Button {
+        font-size: 34px;
+        padding: 8px 26px;
     }
 }

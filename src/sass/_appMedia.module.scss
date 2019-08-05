@@ -1,0 +1,50 @@
+@media(min-height:641px) {
+    .Section {
+        &Head {
+            font-size: 32px;
+
+            &Desc {
+                font-size: 22px;
+            }
+
+            &Big {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+@media(min-width:450px) {
+    .Section {
+        row-gap: 30px;
+    }
+}
+
+@media(min-width:640px) {
+    .Section {
+        font-size: 24px;
+
+        &Head {
+            font-size: 36px;
+
+            &Desc {
+                font-size: 26px;
+            }
+
+            &Big {
+                font-size: 40px;
+            }
+        }
+
+        &MiniOpacityText {
+            font-size: 24px;
+        }
+    }
+}
+
+// @media(min-width:1024px) {
+//     .AddRemoveWrap {
+//         grid-template-areas: 'addRemove tost';
+//         grid-template-rows: auto;
+//     }
+// }

@@ -47,3 +47,28 @@
         box-shadow: inset 3px 3px 0px 3px $color-bread-end-strong;
     }
 }
+
+@media(min-width:450px) {
+    .Bread {
+        @include makeSquare($bread-size-450);
+
+        &Big {
+            @include makeSquare($bread-size-big-450);
+        }
+    }
+}
+
+@media(min-width:640px) {
+    .Bread {
+        @include makeSquare($bread-size-640);
+
+        //TODO
+        &Big {
+            @include makeSquare($bread-size-big-640);
+        }
+    }
+}
+
+@media(min-width:768px) {
+    .Bread {}
+}
