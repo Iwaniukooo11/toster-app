@@ -55,3 +55,21 @@
         transform: rotate(195deg);
     }
 }
+
+@media(min-width:768px) {
+    .Olives {
+        border-width: 2px;
+        &::after{
+            left:-2px
+        }
+        &::before{
+            right:-2px
+        }
+    }
+}
+
+@media(min-width:1024px) {
+    .Olives {
+        border-width: 3px
+    }
+}

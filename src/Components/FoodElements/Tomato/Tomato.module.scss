@@ -44,3 +44,15 @@
         }
     }
 }
+
+@media(min-width:768px) {
+    .Tomato {
+        box-shadow: inset 0px -1px 0px 7px $color-red-dark;
+    }
+}
+
+@media(min-width:1024px) {
+    .Tomato {
+        box-shadow: inset 0px -1px 0px 9px $color-red-dark;
+    }
+}

@@ -6,8 +6,7 @@
     border-radius: 30% 30% 5% 5%;
     position: relative;
     box-shadow: inset 3px 3px 0px 3px $color-grey-dark;
-
-    &::after {
+       &::after {
         @include makePseudo;
         @include makeSquare(20px);
         background-color: $color-orange-light;
@@ -31,5 +30,15 @@
     .Toster {
         @include makeSquare($toster-size-640);
 
+    }
+}
+@media(min-width:768px){
+    .Toster{
+        box-shadow: inset 6px 6px 0px 3px $color-grey-dark;
+    }
+}
+@media(min-width:1024px){
+    .Toster{
+        box-shadow: inset 8px 8px 0px 3px $color-grey-dark;
     }
 }

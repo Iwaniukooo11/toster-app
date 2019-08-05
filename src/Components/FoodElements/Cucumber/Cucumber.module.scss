@@ -30,3 +30,15 @@
         background-color: #fff;
     }
 }
+
+@media(min-width:768px) {
+    .Cucumber {
+        border-width: 4px;
+    }
+}
+
+@media(min-width:1024px) {
+    .Cucumber {
+        border-width: 5px;
+    }
+}

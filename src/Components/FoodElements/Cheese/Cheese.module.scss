@@ -7,8 +7,7 @@
     border-radius: 39% 16% 18% 20%;
     width: 47%;
     height: 84%;
-    font-size: 9px;
-    box-shadow: inset 0.35em -0.20em 0 3px $color-yellow-dark;
+    box-shadow: inset 3px -3px 0 3px $color-yellow-dark;
 
     &::after {
         @include makePseudo;
@@ -42,5 +41,17 @@
         right: 6%;
         top: 3%;
         transform: rotate(-2deg)
+    }
+}
+
+@media(min-width:768px) {
+    .Cheese {
+        box-shadow: inset 6px -6px 0 3px $color-yellow-dark;
+    }
+}
+
+@media(min-width:1024px) {
+    .Cheese {
+        box-shadow: inset 8px -8px 0 3px $color-yellow-dark;
     }
 }

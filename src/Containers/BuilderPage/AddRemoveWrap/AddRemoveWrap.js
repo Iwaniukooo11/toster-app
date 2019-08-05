@@ -12,7 +12,7 @@ import Cucumber from '../../../Components/FoodElements/Cucumber/Cucumber'
 
 const AddRemoveWrap = props => {
     const addRemovers = [
-        { title: 'Olej', type: 'oil', max: 1 },
+        { title: 'Oliwa', type: 'oil', max: 1 },
         { title: 'Ser', type: 'cheese', max: 2 },
         { title: 'Pomidor', type: 'tomato', max: 2 },
         { title: 'Oliwki', type: 'olives', max: 4 },
