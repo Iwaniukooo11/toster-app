@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import * as actionTypes from '../../store/actionTypes'
 import globStyles from '../../sass/App.module.scss'
 import locStyles from './UsersPage.module.scss'
 import spinner from './spinners.module.scss'
@@ -14,6 +16,11 @@ class UsersPage extends Component {
     }
 
     componentDidMount() {
+        // this.props.endSelecting(false)
+        // this.props.doneTosting(false)
+        // this.props.toggleBreadSelect()
+        this.props.reset()
+
         firebase.database().ref('tosts/').once('value')
             .then(e => {
                 return e.val()
@@ -59,4 +66,20 @@ class UsersPage extends Component {
     }
 }
 
-export default UsersPage;
+const mapStateToProps = state => {
+    return {
+        isBreadSelect: state.homePage.isBreadSelect,
+        isSelectingEnded: state.homePage.isSelectingEnded,
+        isTostingDone: state.homePage.isTostingDone
+    }
+}
+const mapDispatchToProps = dispatch => {
+    return {
+        toggleBreadSelect: (to = true) => dispatch({ type: actionTypes.TOGGLE_SELECT_HOME_BREAD, to: to }),
+        endSelecting: (to = true) => dispatch({ type: actionTypes.END_SELECTING, to: to }),
+        doneTosting: (to = true) => dispatch({ type: actionTypes.DONE_TOSTING, to: to }),
+        reset: () => dispatch({ type: actionTypes.RESET })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UsersPage);

@@ -12,6 +12,12 @@ import { connect } from 'react-redux'
 import * as actionTypes from '../../store/actionTypes'
 
 class HomePage extends Component {
+    // componentDidMount() {
+    //     this.props.endSelecting(false)
+    //     this.props.doneTosting(false)
+    //     this.props.toggleBreadSelect()
+    //     console.log(this.props)
+    // }
     render() {
         return (
             <main className={`${globStyles.Section}`}>
@@ -48,8 +54,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         toggleBreadSelect: () => dispatch({ type: actionTypes.TOGGLE_SELECT_HOME_BREAD }),
-        endSelecting: () => dispatch({ type: actionTypes.END_SELECTING }),
-        doneTosting: () => dispatch({ type: actionTypes.DONE_TOSTING })
+        endSelecting: (to = true) => dispatch({ type: actionTypes.END_SELECTING, to: to }),
+        doneTosting: (to = true) => dispatch({ type: actionTypes.DONE_TOSTING, to: to })
     }
 }
 

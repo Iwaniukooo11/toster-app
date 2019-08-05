@@ -6,3 +6,5 @@ export const ADD_INGR = 'ADD_INGR'
 export const REMOVE_INGR = 'REMOVE_INGR'
 
 export const ADD_NAME = 'ADD_NAME'
+export const RESET = 'RESET'
+
