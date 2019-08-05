@@ -21,3 +21,21 @@
         }
     }
 }
+
+@media(min-width:768px) {
+    .nav {
+        &Head {
+            font-size: 35px;
+            margin-left: 15px;
+        }
+    }
+}
+
+@media(min-width:1024px) {
+    .nav {
+        &Head {
+            font-size: 38px;
+            margin-left: 20px;
+        }
+    }
+}

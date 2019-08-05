@@ -5,7 +5,6 @@
     display: flex;
     position: fixed;
     position: absolute;
-    // bottom: 0;
     bottom: 0;
     width: 100%;
     left: 0;
@@ -14,4 +13,16 @@
     background-color: $color-blue;
     color: $color-orange-light;
     padding: 4px 0;
+}
+
+@media(min-width:768px) {
+    .Footer {
+        font-size: #{0.8* $footer-size};
+    }
+}
+
+@media(min-width:1024px) {
+    .Footer {
+        font-size: #{0.9* $footer-size};
+    }
 }

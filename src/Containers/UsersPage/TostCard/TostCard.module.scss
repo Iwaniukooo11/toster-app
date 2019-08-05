@@ -71,3 +71,14 @@
         min-width: 385px;
     }
 }
+
+@media(min-width:1024px) {
+    .TostCard {
+        &List {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+}
