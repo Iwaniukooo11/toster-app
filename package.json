@@ -1,6 +1,7 @@
 {
   "name": "toster-app",
   "version": "0.1.0",
+  "homepage": "https://Iwaniukooo11.github.io/toster-builder",
   "private": true,
   "dependencies": {
     "@babel/core": "7.4.3",
