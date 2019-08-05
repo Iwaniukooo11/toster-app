@@ -3,3 +3,9 @@
         grid-area: addRemove
     }
 }
+
+@media(min-width:960px) {
+    .AddRemoveWrap {
+        grid-area: addRemoveHome
+    }
+}

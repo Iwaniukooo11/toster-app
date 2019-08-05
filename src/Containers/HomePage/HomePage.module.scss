@@ -8,3 +8,9 @@
         grid-column: 1 / -1;
     }
 }
+
+@media(min-width:960px) {
+    .HomePage {
+        grid-template-areas: 'addRemoveHome tost''number tost';
+    }
+}

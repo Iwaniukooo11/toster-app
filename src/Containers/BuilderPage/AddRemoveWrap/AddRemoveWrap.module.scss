@@ -22,12 +22,12 @@
     }
 }
 
-@media(min-width:86px) {
-    .WrapList {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-}
+// @media(min-width:86px) {
+//     .WrapList {
+//         max-width: 600px;
+//         margin: 0 auto;
+//     }
+// }
 
 @media(min-width:860px) {
     .WrapList {
@@ -45,5 +45,6 @@
     .Bread {
         height: $bread-size-big-640;
         align-self: center;
+        justify-self: flex-end;
     }
 }

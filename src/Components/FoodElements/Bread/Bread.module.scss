@@ -62,13 +62,15 @@
     .Bread {
         @include makeSquare($bread-size-640);
 
-        //TODO
         &Big {
             @include makeSquare($bread-size-big-640);
         }
     }
 }
 
-@media(min-width:768px) {
-    .Bread {}
-}
+// @media(min-width:1200px) {
+//     .Bread {
+//         justify-self: flex-end;
+//         transform: translateX(20%)
+//     }
+// }

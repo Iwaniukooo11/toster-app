@@ -26,3 +26,15 @@
         grid-area: num;
     }
 }
+
+@media(min-width:860px) {
+    .Number {
+        // justify-self: flex-end;
+    }
+}
+
+@media(min-width:960px) {
+    .Number {
+        grid-area: number;
+    }
+}

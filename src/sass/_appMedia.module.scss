@@ -42,9 +42,24 @@
     }
 }
 
-// @media(min-width:1024px) {
-//     .AddRemoveWrap {
-//         grid-template-areas: 'addRemove tost';
-//         grid-template-rows: auto;
-//     }
-// }
+@media(min-width:1200px) {
+    .Section {
+        font-size: 26px;
+
+        &Head {
+            font-size: 39px;
+
+            &Desc {
+                font-size: 29px;
+            }
+
+            &Big {
+                font-size: 43px;
+            }
+        }
+
+        &MiniOpacityText {
+            font-size: 28px;
+        }
+    }
+}
