@@ -15,3 +15,27 @@
     }
 
 }
+
+@media(min-width:960px) {
+
+
+
+    .Section {
+        grid-template-areas: 'head tost''buttonback tost''desc tost''form tost''buttonnext tost';
+        grid-template-columns: auto 1fr;
+
+        &Head {
+            grid-area: head;
+        }
+
+        &Form {
+            grid-area: form;
+        }
+
+        &Tost {
+            grid-area: tost;
+            align-self: center;
+            transform: translate(-25%);
+        }
+    }
+}

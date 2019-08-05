@@ -7,7 +7,9 @@ const Button = props => {
     const btn = <button className={locStyles.Button} onClick={props.clicked} disabled={props.disabled}>{props.children}</button>
     return (
         props.link ?
-            <button className={locStyles.Button} onClick={props.clicked} disabled={props.disabled}>
+            <button className={`${locStyles.Button} ${props.back ? locStyles.Back : null}`}
+                onClick={props.clicked}
+                disabled={props.disabled}>
                 <Link to={props.link}>
                     {props.children}
                 </Link>

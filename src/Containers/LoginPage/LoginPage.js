@@ -53,11 +53,13 @@ class LoginPage extends Component {
         }
 
         return (
-            <main className={globStyles.Section}>
+            <main className={`${globStyles.Section} ${locStyles.Section}`}>
 
-                <h2 className={`${globStyles.SectionHead} ${globStyles.SectionHeadBig} ${locStyles.SectionHead}`}>Tak wygląda twój tost</h2>
+                <h2 className={`${globStyles.SectionHead}
+                 ${globStyles.SectionHeadBig}
+                  ${locStyles.SectionHead}`}>Tak wygląda twój tost</h2>
 
-                <Button link={'/builder'}>
+                <Button link={'/builder'} back={true}>
                     <i className="fas fa-arrow-left"></i>
                 </Button>
 
@@ -67,14 +69,17 @@ class LoginPage extends Component {
                     <span className={locStyles.SectionMiniTxt}>(od 4 do 12 znaków)</span>
                 </p>
 
-                <Tost ingr={this.props.ingr} />
+                <div className={locStyles.SectionTost}>
+                    <Tost ingr={this.props.ingr} />
+                </div>
 
                 <form action=""
                     className={`${globStyles.SectionForm}
-                    `}>
+                    ${locStyles.SectionForm}`}>
                     <input type="text"
                         className={`${globStyles.SectionInput}
-                        ${globStyles[classInput.join(' ')]}`}
+                        ${globStyles[classInput.join(' ')]} 
+                       `}
                         placeholder='Podpisz się!'
                         value={this.props.name}
                         onChange={this.inputTextHandler}
