@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/toster-app/precache-manifest.52d7fbd0fc3e47d68dd26e34ced3d534.js"
+  "/toster-app/precache-manifest.ebf18a28e250a0275854a4d648f85c45.js"
 );
 
 self.addEventListener('message', (event) => {
