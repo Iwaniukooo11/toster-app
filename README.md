@@ -19,6 +19,6 @@
 ## Author:
 Mateusz Iwaniuk
 
-[Live Demo](https://Iwaniukooo11.github.io/toster-builder)
+[Live Demo](https://Iwaniukooo11.github.io/toster-app)
 
 
